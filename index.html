@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <div class="dashboard-wrapper">
+        <button id="themeToggleBtn" class="theme-toggle">☀️ Light Mode</button>
+
+        <header class="dashboard-header">
+            <h2>⏱️ Developer Productivity Dashboard</h2>
+            <p>Οργανώστε τα tasks σας και μετρήστε τον χρόνο εργασίας σας σε πραγματικό χρόνο.</p>
+        </header>
+
+        <div class="analytics-bar">
+            <div class="analytic-card">
+                <span class="title">Συνολικά Tasks</span>
+                <span id="totalTasks">0</span>
+            </div>
+            <div class="analytic-card">
+                <span class="title">Συνολικός Χρόνος</span>
+                <span id="totalTime">00:00:00</span>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Τι θα δουλέψετε τώρα; (e.g., Διόρθωση Bug #42)...">
+            <select id="categoryInput">
+                <option value="💻 Coding">Coding</option>
+                <option value="🎨 Design">Design</option>
+                <option value="📝 Review">Code Review</option>
+                <option value="☕ Break">Break</option>
+            </select>
+            <button id="addTaskBtn">Προσθήκη Task</button>
+        </div>
+
+        <div class="tasks-section">
+            <h3>📋 Λίστα Εργασιών</h3>
+            <div id="tasksList"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
